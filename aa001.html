@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            max-width: 100%;
+            height: auto;
+        }
+
+        
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+
+            background-color: bisque;
+        }
+
+        .image {
+            opacity: 1;
+            display: block;
+            /* width: 100%;
+            height: auto; */
+            margin-left: auto;
+            margin-right: auto;
+
+            transition: .5s ease;
+            backface-visibility: hidden;
+
+        }
+
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .container:hover .image {
+            opacity: 0.3;
+        }
+
+        .container:hover .middle {
+            opacity: 1;
+        }
+
+        .text {
+            background-color: green;
+            color: white;
+            font-size: 25px;
+            padding: 16px 32px;
+        }
+    </style>
+</head>
+
+<body >
+
+    <div class="hold">
+        <img src="img/img/logo.png" style="width: 30%;">
+        <div class="container">
+            <img src="img/book2.jpg" alt="Avatar" class="image" style="width: 55%;">
+            <div class="middle">
+                <button onclick="進入()" class="text" style="cursor: pointer;">
+                    在這片浩瀚的森林中
+                    <br>
+                    尋找不同的生活
+                </button>
+                <script>
+                    function 進入() {
+                        location.href = "action.html";
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+    <h4 style="text-align: center;">客服專線：04-2222-3333</h4>
+</body>
+
+</html>
